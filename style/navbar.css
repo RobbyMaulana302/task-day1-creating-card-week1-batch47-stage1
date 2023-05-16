@@ -1,0 +1,52 @@
+* {
+    font-family: sans-serif;
+    color: black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #ebebeb;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 25px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+nav ul li .active {
+    color: orangered;
+}
+
+nav ul li img {
+    width: 50px;
+}
+
+.nav-left {
+    flex: 50%;
+    margin-left: 20vh;
+}
+
+.nav-right {
+    flex: 50%;
+    text-align: end;
+    margin-right: 20vh;
+}
+
+.nav-right a {
+    background-color: black;
+    padding: 8px 20px;
+    color: white;
+    border-radius: 5px;
+}

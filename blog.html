@@ -5,9 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/blog.css">
+    <link rel="stylesheet" href="style/navbar.css">
     <title>Blog Page</title>
 </head>
 <body>
+
+    <div>
+        <nav>
+            <div class="nav-left">
+                <ul>
+                    <li><img src="assets/images/logo_dumbways.png" alt="dumbways-logo" srcset=""></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="active">My Project</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+        </nav>    
+    </div> 
     
     <div class="container">
         <div class="container-card">
@@ -15,7 +31,7 @@
                 <h1>ADD MY PROJECT</h1>
             </div>
             <div class="blog-form">
-                <form action="" onsubmit="addBlog(event)">
+                <form action="" onsubmit="addBlog(event)" id="myForm">
                     <div>
                         <label for="input-title">Project Name</label>
                         <input type="text" id="input-title">
@@ -76,30 +92,32 @@
     <div>
         <h1>My Project</h1>
     </div>
-    <div class="container-project">
-            <div class="container-project-card" id="content">
-                <div class="project-card">
-                    <div class="project-card-image">
-                        <img src="assets/images/logo_dumbways.png" alt="">
-                    </div>
-                    <div class="project-card-title">
-                        <h2>Dumbways Mobile App - 2021</h2>
-                        <p>Durasi</p>
-                    </div>
-                    <div class="project-card-description">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint corrupti excepturi odio officia voluptatem dolorum officiis impedit libero nobis eum, fuga alias aperiam, laudantium error, iure dolores ex eos accusamus.</p>
-                    </div>
-                    <div class="project-technology">
-                        <img src="assets/images/nodejs.png" alt="">
-                    </div>
-                    <div class="project-card-button">
-                        <button>edit</button>
-                        <Button>delete</Button>
+    <a href="blog-detail.html">
+        <div class="container-project">
+                <div class="container-project-card" id="content">
+                    <div class="project-card">
+                        <div class="project-card-image">
+                            <img src="assets/images/logo_dumbways.png" alt="">
+                        </div>
+                        <div class="project-card-title">
+                            <h2>Dumbways Mobile App - 2021</h2>
+                            <p>Durasi : 3 bulan</p>
+                        </div>
+                        <div class="project-card-description">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint corrupti excepturi odio officia voluptatem dolorum officiis impedit libero nobis eum, fuga alias aperiam, laudantium error, iure dolores ex eos accusamus.</p>
+                        </div>
+                        <div class="project-technology">
+                            <img src="assets/images/nodejs.png" alt="">
+                        </div>
+                        <div class="project-card-button">
+                            <button>edit</button>
+                            <Button>delete</Button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </a>
 
     <script src="script/blog.js"></script>
 

@@ -64,6 +64,7 @@ function renderBlog(event) {
         
         document.getElementById("content").innerHTML += 
         `
+        <a href="blog-detail.html">
             <div class="project-card">
                 <div class="project-card-image">
                     <img src="${dataBlog[index].image}" alt="blog_image">
@@ -83,6 +84,8 @@ function renderBlog(event) {
                     <Button>delete</Button>
                 </div>
             </div>
+        
+        </a>
         `
     }
 }

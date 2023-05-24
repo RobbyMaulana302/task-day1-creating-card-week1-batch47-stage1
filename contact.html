@@ -1,69 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/contact.css">
-    <link rel="stylesheet" href="style/navbar.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/contact.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
     <title>Contact Me</title>
-</head>
-<body>
-    
-    <div>
-        <nav>
-            <div class="nav-left">
-                <ul>
-                    <li><img src="assets/images/logo_dumbways.png" alt="dumbways-logo" srcset=""></li>
-                    <li><a href="index.html" class="">Home</a></li>
-                    <li><a href="blog.html">My Project</a></li>
-                </ul>
-            </div>
-            <div class="nav-right">
-                <a href="#" class="active">Contact</a>
-            </div>
-        </nav>    
-    </div> 
-    
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img
+              src="assets/images/logo_dumbways.png"
+              alt="dumbways-logo"
+              srcset=""
+            />
+          </li>
+          <li><a href="index.html" class="collapse-menu">Home</a></li>
+          <li><a href="blog.html" class="collapse-menu">My Project</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right collapse-menu">
+        <a href="#">Contact Me</a>
+      </div>
+      <div class="nav-right" id="barsmenu">
+        <button onclick="hamburgerKlik()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hamburger-nav" id="hamburger-nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">My Project</a>
+      <a href="contact.html"><button>Contact me</button></a>
+    </div>
+
     <div class="form">
-        <h1>GET IN TOUCH</h1>
-        <form action="">
-            <div class="input-name">
-                <label for="input-name">Name</label>
-                <input type="text" id="input-name">
-            </div>
+      <h1>GET IN TOUCH</h1>
+      <form action="">
+        <div class="input-name">
+          <label for="input-name">Name</label>
+          <input type="text" id="input-name" />
+        </div>
 
-            <div class="input-email">
-                <label for="input-email">Email</label>
-                <input type="email" id="input-email">
-            </div>
+        <div class="input-email">
+          <label for="input-email">Email</label>
+          <input type="email" id="input-email" />
+        </div>
 
-            <div class="input-number">
-                <label for="input-number">Phone Number</label>
-                <input type="number" id="input-number">
-            </div>
+        <div class="input-number">
+          <label for="input-number">Phone Number</label>
+          <input type="number" id="input-number" />
+        </div>
 
-            <div class="input-subject">
-                <label for="input-subject">Subject</label>
-                <select name="" id="input-subject">
-                    <option value="" hidden>Select Subject</option>
-                    <option>Frontend Dev</option>
-                    <option>Backend Dev</option>
-                    <option>Fullstack Dev</option>
-                </select>
-            </div>
+        <div class="input-subject">
+          <label for="input-subject">Subject</label>
+          <select name="" id="input-subject">
+            <option value="" hidden>Select Subject</option>
+            <option>Frontend Dev</option>
+            <option>Backend Dev</option>
+            <option>Fullstack Dev</option>
+          </select>
+        </div>
 
-            <div class="input-message">
-                <label for="input-message">Your Messager</label>
-                <textarea name="" id="input-message" cols="10" rows="5"></textarea>
-            </div>
-            
-            <div class="button">
-                <button type="button" id="button">Submit</button>
-            </div>
-        </form>
+        <div class="input-message">
+          <label for="input-message">Your Messager</label>
+          <textarea name="" id="input-message" cols="10" rows="5"></textarea>
+        </div>
+
+        <div class="button">
+          <button type="button" id="button">Submit</button>
+        </div>
+      </form>
     </div>
 
     <script src="script/script.js"></script>
-</body>
+    <script src="script/navbar.js"></script>
+  </body>
 </html>

@@ -1,52 +1,134 @@
 * {
-    font-family: sans-serif;
-    color: black;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+  font-family: sans-serif;
+  color: black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 nav {
-    background-color: #ebebeb;
-    display: flex;
-    align-items: center;
-    height: 10vh;
+  background-color: #ebebeb;
+  display: flex;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 1.4rem 7%;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 9999;
 }
 
 nav ul {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 nav ul li {
-    margin-right: 25px;
-    font-size: 20px;
-    font-weight: 400;
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 2rem;
 }
 
 nav ul li .active {
-    color: orangered;
+  color: orangered;
 }
 
 nav ul li img {
-    width: 50px;
+  width: 50px;
 }
 
 .nav-left {
-    flex: 50%;
-    margin-left: 20vh;
+  flex: 1;
 }
 
 .nav-right {
-    flex: 50%;
-    text-align: end;
-    margin-right: 20vh;
+  flex: 1;
+  text-align: end;
 }
 
 .nav-right a {
-    background-color: black;
-    padding: 8px 20px;
-    color: white;
-    border-radius: 5px;
+  background-color: black;
+  padding: 8px 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+/* hamburger navigasi */
+
+#barsmenu {
+  display: none;
+}
+
+#barsmenu button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.hamburger-nav {
+  font-size: 1.4rem;
+  list-style-type: none;
+  display: none;
+  margin-top: 5rem;
+}
+
+.hamburger-nav a {
+  display: flex;
+  width: 100%;
+  background-color: #9b9a9a;
+  padding: 1rem;
+  border-bottom: 1px solid #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-nav .active {
+  color: orangered;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-nav a button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0.3rem;
+  font-weight: 200;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* media query */
+
+/* laptop */
+@media only screen and (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #barsmenu {
+    display: inline-block;
+  }
+
+  .collapse-menu {
+    display: none;
+  }
+
+  .hamburger-nav {
+    margin-top: 6rem;
+  }
 }

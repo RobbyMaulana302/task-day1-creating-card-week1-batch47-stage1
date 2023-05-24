@@ -1,65 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/navbar.css">
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/navbar.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
     <title>Task Day 1 Dumbways.id</title>
-</head>
-<body>
-
-
+  </head>
+  <body>
     <nav>
-        <div class="nav-left">
-            <ul>
-                <li><img src="assets/images/logo_dumbways.png" alt="dumbways-logo" srcset=""></li>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="blog.html">My Project</a></li>
-            </ul>
-        </div>
-        <div class="nav-right">
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>    
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img
+              src="assets/images/logo_dumbways.png"
+              alt="dumbways-logo"
+              srcset=""
+            />
+          </li>
+          <li><a href="#" class="active collapse-menu">Home</a></li>
+          <li><a href="blog.html" class="collapse-menu">My Project</a></li>
+        </ul>
+      </div>
+      <div class="nav-right collapse-menu">
+        <a href="contact.html">Contact Me</a>
+      </div>
+      <div class="nav-right" id="barsmenu">
+        <button onclick="hamburgerKlik()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
 
-
-    <div class="container">
-        <section>
-            <div class="left">
-                <div class="section-left">
-                    <h2 style="font-weight: bold;">Hi Welcome to my hut</h2>
-                    <p>Hai, Perkenalkan nama saya Robby Maulana, umur saya 24 tahun dan sedang menempuh pendidikan jenjang strata 1 program studi Teknik Informatika, Universitas Pamulang. Pada hari ini tanggal 15 mei 2023 saya mengikuti kelas bootcamp dumbways batch 47 stage 1 dengan mentor atau teacher ka abel, terimakasih atas pertemuan pertama dan terimakasih juga untuk mentor yang lainya. Semoga kami para calon anggota dumbways mampu mengikuti pelajaran dengan baik. Terimakasih.</p>
-                    
-                    <div class="contact">
-                        <a href="contact.html"><div class="section-left-contact">Contact</div></a>
-                        <p>download CV<i class="bi bi-download"></i></p>
-                    </div>
-                    
-                    <!-- Logo Icon -->
-                    <div class="icon">
-                        <a href="https://www.linkedin.com/in/robby-maulana-810ba8188/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/robbymaulaan_/"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right">
-                <div class="right-content">
-                    <img src="assets/images/foto.jpg" alt="Robby Maulana" class="right-content-image">
-                    <h3>Robby Maulana</h3>
-                    <p>Fullstack Developer</p>
-                </div>
-            </div>
-        </section>
+    <div class="hamburger-nav" id="hamburger-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="blog.html">My Project</a>
+      <a href="contact.html"><button>Contact me</button></a>
     </div>
 
-    <script src="script/script.js"></script>
+    <section>
+      <div class="container">
+        <div class="left">
+          <div class="section-left">
+            <h2 style="font-weight: bold">Hi Welcome to my hut</h2>
+            <p>
+              Hai, Perkenalkan nama saya Robby Maulana, umur saya 24 tahun dan
+              sedang menempuh pendidikan jenjang strata 1 program studi Teknik
+              Informatika, Universitas Pamulang. Pada hari ini tanggal 15 mei
+              2023 saya mengikuti kelas bootcamp dumbways batch 47 stage 1
+              dengan mentor atau teacher ka abel, terimakasih atas pertemuan
+              pertama dan terimakasih juga untuk mentor yang lainya. Semoga kami
+              para calon anggota dumbways mampu mengikuti pelajaran dengan baik.
+              Terimakasih.
+            </p>
 
-</body>
+            <div class="contact">
+              <a href="contact.html"
+                ><div class="section-left-contact">Contact</div></a
+              >
+              <p>download CV<i class="bi bi-download"></i></p>
+            </div>
+
+            <!-- Logo Icon -->
+            <div class="icon">
+              <a href="https://www.linkedin.com/in/robby-maulana-810ba8188/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://www.facebook.com/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://www.twitter.com/"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com/robbymaulaan_/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="right-content">
+            <img
+              src="assets/images/foto.jpg"
+              alt="Robby Maulana"
+              class="right-content-image"
+            />
+            <h3>Robby Maulana</h3>
+            <p>Fullstack Developer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script/navbar.js"></script>
+  </body>
 </html>

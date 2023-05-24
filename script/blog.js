@@ -3,8 +3,6 @@ let dataBlog = [];
 function addBlog(event) {
   event.preventDefault();
 
-  let technology = [];
-
   let title = document.getElementById("input-title").value;
   let startDate = new Date(document.getElementById("input-start-date").value);
   let endDate = new Date(document.getElementById("input-end-date").value);
@@ -24,6 +22,7 @@ function addBlog(event) {
     return alert("Description can't null");
   }
 
+  let technology = [];
   for (let index = 0; index < checkbox.length; index++) {
     if (checkbox[index].checked) {
       technology.push(checkbox[index].value);
@@ -92,13 +91,14 @@ function getDistanceTime(startTime, endTime) {
   let secondInHours = 3600;
   let hoursInDays = 24;
   let daysInWeeks = 7;
+  let daysInMonths = 30;
+  let daysInYears = 365;
 
   let distanceYears = Math.floor(
-    distance / (milisecond * secondInHours * hoursInDays * 365)
+    distance / (milisecond * secondInHours * hoursInDays * daysInYears)
   );
-  console.log(distanceYears);
   let distanceMonths = Math.floor(
-    distance / (milisecond * secondInHours * hoursInDays * 30)
+    distance / (milisecond * secondInHours * hoursInDays * daysInMonths)
   );
   let distanceWeeks = Math.floor(
     distance / (milisecond * secondInHours * hoursInDays * daysInWeeks)

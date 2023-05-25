@@ -1,74 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/blog_detail.css">
-    <link rel="stylesheet" href="style/navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/blog_detail.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>Blog Detail</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <nav>
-        <div class="nav-left">
-            <ul>
-                <li><img src="assets/images/logo_dumbways.png" alt="dumbways-logo" srcset=""></li>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="blog.html">My Project</a></li>
-            </ul>
-        </div>
-        <div class="nav-right">
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>   
+      <div class="nav-left">
+        <ul>
+          <li>
+            <img
+              src="assets/images/logo_dumbways.png"
+              alt="dumbways-logo"
+              srcset=""
+            />
+          </li>
+          <li><a href="index.html" class="collapse-menu">Home</a></li>
+          <li><a href="blog.html" class="collapse-menu">My Project</a></li>
+          <li><a href="testi.html" class="collapse-menu">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html" class="collapse-menu">Contact</a>
+      </div>
+      <div class="nav-right" id="barsmenu">
+        <button onclick="hamburgerKlik()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
 
-    <div class="container">
-        <div class="container-detail">
-            <h1>Dumbways Web App</h1>
-            <div class="detail-post">
-                <div class="detail-image-post">
-                    <img src="assets/images/foto.jpg" alt="foto">
-                </div>
-                <div class="detail-date-post">
-                    <div class="detail-time-post">
-                        <div>
-                            <h3>Duration</h3>
-                            <p><i class="fa-solid fa-calendar-days"></i> 12 jan 2021 - 11 feb 2021</p>
-                            <p><i class="fa-solid fa-clock"></i>1 Month</p>
-                        </div>
-                    </div>
-                    <div class="detail-technology-post">
-                        <h3>Technologies</h3>
-                        <div class="detail-technology">
-                            <div class="detail-tech">
-                                <img src="assets/images/nodejs.png" alt="node-js">
-                                <div><span>Node js</span></div>
-                            </div>
-                            <div class="detail-tech">
-                                <img src="assets/images/nextjs.png" alt="next-js">
-                                <div><span>Node js</span></div>
-                            </div>
-                            <div class="detail-tech">
-                                <img src="assets/images/reactjs.png" alt="react-js">
-                                <div><span>Node js</span></div>
-                            </div>
-                            <div class="detail-tech">
-                                <img src="assets/images/typescript.png" alt="typescript">
-                                <div><span>Node js</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="detail-description">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias tenetur officia nisi sit facilis suscipit facere, numquam perspiciatis harum, blanditiis ratione, itaque iusto? Veritatis optio nesciunt dolore, animi doloremque dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit enim temporibus sapiente repudiandae corrupti molestias aliquid placeat dolorem earum, ipsam neque, quisquam nesciunt ratione? Distinctio exercitationem expedita perspiciatis cumque eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, expedita nisi? Eligendi nesciunt nobis, blanditiis repellendus molestias sit esse voluptatibus ab similique corporis consequuntur illum nulla labore? Pariatur, earum soluta.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias tenetur officia nisi sit facilis suscipit facere, numquam perspiciatis harum, blanditiis ratione, itaque iusto? Veritatis optio nesciunt dolore, animi doloremque dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit enim temporibus sapiente repudiandae corrupti molestias aliquid placeat dolorem earum, ipsam neque, quisquam nesciunt ratione? Distinctio exercitationem expedita perspiciatis cumque eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, expedita nisi? Eligendi nesciunt nobis, blanditiis repellendus molestias sit esse voluptatibus ab similique corporis consequuntur illum nulla labore? Pariatur, earum soluta.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias tenetur officia nisi sit facilis suscipit facere, numquam perspiciatis harum, blanditiis ratione, itaque iusto? Veritatis optio nesciunt dolore, animi doloremque dolor? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit enim temporibus sapiente repudiandae corrupti molestias aliquid placeat dolorem earum, ipsam neque, quisquam nesciunt ratione? Distinctio exercitationem expedita perspiciatis cumque eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, expedita nisi? Eligendi nesciunt nobis, blanditiis repellendus molestias sit esse voluptatibus ab similique corporis consequuntur illum nulla labore? Pariatur, earum soluta.</p>
-            </div>
-        </div>
+    <div class="hamburger-nav" id="hamburger-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="blog.html">My Project</a>
+      <a href="testi.html" class="hamburger">Testimonials</a>
+      <a href="contact.html"><button>Contact me</button></a>
     </div>
 
-</body>
+    <div class="container">
+      <div class="container-detail">
+        <h1>Dumbways Web App</h1>
+        <div class="detail-post">
+          <div class="detail-image-post">
+            <img src="assets/images/foto.jpg" alt="foto" />
+          </div>
+          <div class="detail-date-post">
+            <div class="detail-time-post">
+              <div>
+                <h3>Duration</h3>
+                <p>
+                  <i class="fa-solid fa-calendar-days"></i> 12 jan 2021 - 11 feb
+                  2021
+                </p>
+                <p><i class="fa-solid fa-clock"></i>1 Month</p>
+              </div>
+            </div>
+            <div class="detail-technology-post">
+              <h3>Technologies</h3>
+              <div class="detail-technology">
+                <div class="detail-tech">
+                  <img src="assets/images/nodejs.png" alt="node-js" />
+                  <div><span>Node js</span></div>
+                </div>
+                <div class="detail-tech">
+                  <img src="assets/images/nextjs.png" alt="next-js" />
+                  <div><span>Node js</span></div>
+                </div>
+                <div class="detail-tech">
+                  <img src="assets/images/reactjs.png" alt="react-js" />
+                  <div><span>Node js</span></div>
+                </div>
+                <div class="detail-tech">
+                  <img src="assets/images/typescript.png" alt="typescript" />
+                  <div><span>Node js</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-description">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            tenetur officia nisi sit facilis suscipit facere, numquam
+            perspiciatis harum, blanditiis ratione, itaque iusto? Veritatis
+            optio nesciunt dolore, animi doloremque dolor? Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Fugit enim temporibus sapiente
+            repudiandae corrupti molestias aliquid placeat dolorem earum, ipsam
+            neque, quisquam nesciunt ratione? Distinctio exercitationem expedita
+            perspiciatis cumque eos. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Eius, expedita nisi? Eligendi nesciunt nobis,
+            blanditiis repellendus molestias sit esse voluptatibus ab similique
+            corporis consequuntur illum nulla labore? Pariatur, earum soluta.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            tenetur officia nisi sit facilis suscipit facere, numquam
+            perspiciatis harum, blanditiis ratione, itaque iusto? Veritatis
+            optio nesciunt dolore, animi doloremque dolor? Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Fugit enim temporibus sapiente
+            repudiandae corrupti molestias aliquid placeat dolorem earum, ipsam
+            neque, quisquam nesciunt ratione? Distinctio exercitationem expedita
+            perspiciatis cumque eos. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Eius, expedita nisi? Eligendi nesciunt nobis,
+            blanditiis repellendus molestias sit esse voluptatibus ab similique
+            corporis consequuntur illum nulla labore? Pariatur, earum soluta.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            tenetur officia nisi sit facilis suscipit facere, numquam
+            perspiciatis harum, blanditiis ratione, itaque iusto? Veritatis
+            optio nesciunt dolore, animi doloremque dolor? Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Fugit enim temporibus sapiente
+            repudiandae corrupti molestias aliquid placeat dolorem earum, ipsam
+            neque, quisquam nesciunt ratione? Distinctio exercitationem expedita
+            perspiciatis cumque eos. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Eius, expedita nisi? Eligendi nesciunt nobis,
+            blanditiis repellendus molestias sit esse voluptatibus ab similique
+            corporis consequuntur illum nulla labore? Pariatur, earum soluta.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script/navbar.js"></script>
+  </body>
 </html>

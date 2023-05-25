@@ -1,3 +1,8 @@
+:root {
+  --navbar: #d3d3d3;
+  --primary: #fafafa;
+}
+
 * {
   font-family: sans-serif;
   color: black;
@@ -5,6 +10,10 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+}
+
+html {
+  background-color: var(--primary);
 }
 
 .form {

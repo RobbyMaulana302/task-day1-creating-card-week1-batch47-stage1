@@ -1,7 +1,19 @@
-body {
+:root {
+  --navbar: #d3d3d3;
+  --primary: #fafafa;
+}
+
+* {
+  font-family: sans-serif;
+  color: black;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: grey;
+  text-decoration: none;
+}
+
+html {
+  background-color: var(--primary);
 }
 
 section {

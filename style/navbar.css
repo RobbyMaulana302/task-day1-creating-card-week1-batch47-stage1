@@ -1,3 +1,8 @@
+:root {
+  --navbar: #d3d3d3;
+  --primary: #fafafa;
+}
+
 * {
   font-family: sans-serif;
   color: black;
@@ -8,7 +13,7 @@
 }
 
 nav {
-  background-color: #ebebeb;
+  background-color: var(--navbar);
   display: flex;
   top: 0;
   right: 0;

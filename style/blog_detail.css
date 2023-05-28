@@ -32,14 +32,15 @@ html {
 
 .detail-post .detail-image-post {
   flex: 1.5;
+  display: flex;
+  justify-content: center;
 }
 
 .detail-post .detail-image-post img {
   width: 700px;
   height: 500px;
   object-fit: cover;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.4rem;
 }
 
 .detail-post .detail-date-post {
@@ -49,20 +50,17 @@ html {
 }
 
 .detail-date-post .detail-time-post {
-  display: inline-block;
+  font-size: 1.7rem;
 }
 
-.detail-date-post .detail-time-post {
-  font-size: 20px;
+.detail-date-post .detail-time-post h3,
+i {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
-.detail-date-post .detail-time-post h3 {
-  margin-bottom: 10px;
-}
-
-.detail-date-post .detail-time-post i {
-  margin-right: 10px;
-  margin-bottom: 20px;
+.detail-technology-post {
+  font-size: 1.7rem;
 }
 
 .detail-technology-post h3 {
@@ -77,18 +75,12 @@ html {
 
 .detail-technology-post .detail-technology .detail-tech {
   display: flex;
-  margin-left: 2rem;
-}
-
-.detail-technology-post .detail-technology .detail-tech div {
-  margin-top: 15px;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .detail-technology-post .detail-technology span {
-  font-size: 20px;
-  font-weight: 500;
-  margin-left: 20px;
-  margin-bottom: 1020px;
+  margin-left: 1.4rem;
 }
 
 .detail-technology-post .detail-technology img {
@@ -99,66 +91,103 @@ html {
 .detail-description {
   text-align: justify;
   margin-top: 40px;
-  font-size: larger;
+  padding: 0 3rem;
+  font-size: 1rem;
+}
+
+.detail-description p {
+  margin-top: 2rem;
 }
 
 /* media query */
 
 @media (max-width: 1366px) {
   html {
-    font-size: 80%;
+    font-size: 70%;
   }
 
   .detail-post {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .detail-post .detail-image-post {
     display: flex;
     justify-content: center;
+    margin: 0 2rem;
   }
 
   .detail-post .detail-image-post img {
-    justify-content: center;
+    width: 50rem;
     object-fit: cover;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 0.8rem;
   }
 
   .detail-post .detail-date-post {
+    flex: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .detail-post .detail-date-post .detail-time-post div {
-    font-size: 2rem;
-    justify-content: center;
     flex-direction: column;
-    display: flex;
   }
 
-  .detail-post .detail-date-post .detail-technology {
+  .detail-date-post .detail-time-post {
+    font-size: 1.7rem;
+  }
+
+  .detail-date-post .detail-time-post h3,
+  i {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+
+  .detail-technology-post {
+    font-size: 1.7rem;
+  }
+
+  .detail-technology-post h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .detail-technology-post .detail-technology {
     display: grid;
     grid-template-columns: auto auto;
   }
 
-  .detail-post .detail-date-post .detail-technology-post {
-    font-size: 1.5rem;
+  .detail-technology-post .detail-technology .detail-tech {
     display: flex;
-    flex-direction: column;
   }
 
-  .detail-post .detail-technology-post .detail-tech {
+  .detail-technology-post .detail-technology .detail-tech {
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .detail-technology-post .detail-technology span {
+    margin-left: 1.4rem;
+  }
+
+  .detail-technology-post .detail-technology img {
+    width: 50px;
+    border-radius: 50%;
   }
 
   .detail-description p {
     font-size: 1.7rem;
     padding: 1rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .detail-technology-post .detail-technology {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail-post .detail-image-post img {
+    width: 40rem;
+    object-fit: cover;
+    border-radius: 0.8rem;
   }
 }
 
@@ -170,27 +199,26 @@ html {
   .detail-post {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 1rem;
   }
 
   .detail-post .detail-image-post img {
+    width: 60rem;
     object-fit: cover;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    width: 45rem;
   }
 
   .detail-post .detail-date-post {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
   }
 
   .detail-post .detail-date-post .detail-time-post {
-    flex: 1;
     font-size: 2rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    padding: 0.8rem;
   }
 
   .detail-post .detail-date-post .detail-technology {
@@ -199,8 +227,25 @@ html {
   }
 
   .detail-post .detail-date-post .detail-technology-post {
-    flex: 1;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding: 0.8rem;
+  }
+
+  .detail-technology-post .detail-technology {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .detail-technology-post .detail-technology .detail-tech {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+  }
+
+  .detail-technology-post .detail-technology img {
+    width: 50px;
+    border-radius: 50%;
   }
 
   .detail-description p {
@@ -209,57 +254,40 @@ html {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   html {
     font-size: 50%;
   }
 
   .detail-post {
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
   }
 
   .detail-post .detail-image-post {
-    display: flex;
     justify-content: center;
   }
 
   .detail-post .detail-image-post img {
     object-fit: cover;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    width: 30rem;
+    width: 40rem;
   }
 
   .detail-post .detail-date-post {
-    display: block;
-    justify-content: center;
-  }
-
-  .detail-post .detail-date-post .detail-time-post {
-    flex: 1;
-    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
   }
 
   .detail-post .detail-date-post .detail-technology {
     display: flex;
-    flex-direction: column;
-  }
-
-  .detail-post .detail-date-post .detail-technology-post {
-    flex: 1;
-    font-size: 1.5rem;
-    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .detail-post .detail-technology-post .detail-tech {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .detail-description p {
-    font-size: 1.7rem;
-    padding: 1rem;
   }
 }

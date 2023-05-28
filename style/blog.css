@@ -146,17 +146,17 @@ textarea {
 .container-project .project-card {
   background-color: white;
   text-align: center;
-  width: 30rem;
+  width: 25rem;
   border-radius: 10px;
   box-shadow: 1px 1px 10px #bdbdbd;
   justify-content: center;
   align-items: center;
-  margin: 4rem 1.6rem;
+  margin: 2rem 1rem;
+  padding: 0.5rem;
 }
 
 .container-project .project-card .project-card-image img {
   width: 300px;
-  height: 300px;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -216,10 +216,16 @@ textarea {
 
 @media (max-width: 1366px) {
   html {
-    font-size: 70%;
+    font-size: 80%;
   }
-  .container-card {
-    width: 50%;
+
+  .container-project .project-card {
+    width: 30rem;
+    padding: 0.8rem;
+  }
+
+  .container-project .project-card .project-card-image img {
+    width: 250px;
   }
 }
 
@@ -241,9 +247,26 @@ textarea {
     justify-content: center;
     width: 100%;
   }
+
+  .container-project .project-card {
+    width: 30rem;
+    padding: 0.8rem;
+  }
+
+  .container-project .project-card .project-card-image img {
+    width: 250px;
+  }
+
+  .container-project .container-project-card .project-card {
+    font-size: 1.5rem;
+  }
+
+  .container-project .container-project-card .project-card h2 {
+    text-align: left;
+  }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   html {
     font-size: 50%;
   }
@@ -265,5 +288,13 @@ textarea {
   .blog-form .checkbox .checkbox-group {
     display: flex;
     flex-direction: column;
+  }
+
+  .container-project .container-project-card .project-card {
+    font-size: 1.5rem;
+  }
+
+  .container-project .container-project-card .project-card h2 {
+    text-align: left;
   }
 }

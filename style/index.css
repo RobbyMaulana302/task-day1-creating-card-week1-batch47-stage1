@@ -123,7 +123,7 @@ section {
   margin-top: 10px;
 }
 
-/* media queri */
+/* media query */
 
 @media (max-width: 768px) {
   html {
@@ -135,5 +135,34 @@ section {
   .icon {
     text-align: center;
     justify-content: center;
+  }
+
+  .right {
+    margin-left: 0;
+  }
+
+  .right .right-content {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .right .right-content img {
+    width: 30rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 65%;
+  }
+  .icon {
+    flex-wrap: wrap;
+  }
+
+  .icon i {
+    font-size: 3rem;
   }
 }

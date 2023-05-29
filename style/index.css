@@ -14,6 +14,7 @@
 
 html {
   background-color: var(--primary);
+  font-size: 1rem;
 }
 
 section {
@@ -48,12 +49,13 @@ section {
 
 .section-left {
   margin: 5rem auto;
-  text-align: justify;
+  text-align: left;
   justify-content: center;
 }
 
 .section-left p {
   margin-top: 20px;
+  text-align: justify;
 }
 
 .contact {
@@ -127,7 +129,7 @@ section {
 
 @media (max-width: 768px) {
   html {
-    font-size: 80%;
+    font-size: 1rem;
   }
   .container {
     flex-direction: column;
@@ -156,8 +158,20 @@ section {
 
 @media (max-width: 480px) {
   html {
-    font-size: 65%;
+    font-size: 1rem;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .right .right-content img {
+    width: 12rem;
+    justify-content: center;
+  }
+
   .icon {
     flex-wrap: wrap;
   }

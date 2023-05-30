@@ -139,20 +139,25 @@ textarea {
 .container-project-card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
-.container-project .project-card {
+.container-project-card .disini {
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: start;
+}
+
+.container-project .container-project-card .project-card {
   background-color: white;
-  text-align: center;
   width: 25rem;
   border-radius: 10px;
   box-shadow: 1px 1px 10px #bdbdbd;
-  justify-content: center;
+  text-align: center;
   align-items: center;
-  margin: 2rem 1rem;
-  padding: 0.5rem;
+  margin: 2rem auto;
 }
 
 .container-project .project-card .project-card-image img {
@@ -219,13 +224,11 @@ textarea {
     font-size: 80%;
   }
 
-  .container-project .project-card {
-    width: 30rem;
-    padding: 0.8rem;
-  }
-
-  .container-project .project-card .project-card-image img {
-    width: 250px;
+  .container-project-card .disini {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: start;
   }
 }
 

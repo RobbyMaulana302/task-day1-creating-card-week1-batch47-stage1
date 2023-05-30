@@ -45,7 +45,7 @@ function addBlog(event) {
 }
 
 function renderBlog() {
-  document.getElementById("myForm").reset();
+  // document.getElementById("myForm").reset();
   document.getElementById("content").innerHTML = "";
 
   for (let index = 0; index < dataBlog.length; index++) {

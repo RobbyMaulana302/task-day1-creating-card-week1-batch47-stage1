@@ -48,7 +48,7 @@
       <a href="index.html">Home</a>
       <a href="blog.html">My Project</a>
       <a href="#" class="hamburger active">Testimonials</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active"><button>Contact me</button></a>
     </div>
 
     <div class="container">
@@ -56,20 +56,20 @@
       <div class="container-rating">
         <h2>Rating By Stars</h2>
         <div class="rating">
-          <button class="rating-btn" onclick="allTestimonials()">All</button>
-          <button class="rating-btn" onclick="filterTestimonials(1)">
+          <button class="rating-btn" onclick="getAllTestimonials()">All</button>
+          <button class="rating-btn" onclick="getFilteredTestimonial(1)">
             1 <i class="fa-solid fa-star"></i>
           </button>
-          <button class="rating-btn" onclick="filterTestimonials(2)">
+          <button class="rating-btn" onclick="getFilteredTestimonial(2)">
             2 <i class="fa-solid fa-star"></i>
           </button>
-          <button class="rating-btn" onclick="filterTestimonials(3)">
+          <button class="rating-btn" onclick="getFilteredTestimonial(3)">
             3 <i class="fa-solid fa-star"></i>
           </button>
-          <button class="rating-btn" onclick="filterTestimonials(4)">
+          <button class="rating-btn" onclick="getFilteredTestimonial(4)">
             4 <i class="fa-solid fa-star"></i>
           </button>
-          <button class="rating-btn" onclick="filterTestimonials(5)">
+          <button class="rating-btn" onclick="getFilteredTestimonial(5)">
             5 <i class="fa-solid fa-star"></i>
           </button>
         </div>
@@ -78,6 +78,6 @@
     </div>
 
     <script src="script/navbar.js"></script>
-    <script src="script/my_testi.js"></script>
+    <script src="script/testiWithAjax.js"></script>
   </body>
 </html>
